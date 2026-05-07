@@ -35,7 +35,7 @@ def draw_pitch(ax, theme="green"):
 
 # --- 2. ĐỌC DỮ LIỆU (Tương đương phần Files trong R) ---
 # Giả sử đường dẫn folder tương tự
-base_path = r"E:/24022314/Năm 2/Kì 2 năm 2/Khai phá và phân tích dữ liệu/Seminar/data/"
+base_path = r"E:/24022314/Năm 2/Kì 2 năm 2/Khai phá và phân tích dữ liệu/Seminar/football-data-mining-fpgrowth/data/"
 
 def load_match_events(match_id):
     with open(f"{base_path}{match_id}.json", 'r', encoding='utf-8') as f:

@@ -4,7 +4,8 @@ from mlxtend.preprocessing import TransactionEncoder
 from mlxtend.frequent_patterns import fpgrowth, association_rules
 
 # --- 1. LẤY DỮ LIỆU ---
-base_path = r"E:/24022314/Năm 2/Kì 2 năm 2/Khai phá và phân tích dữ liệu/Seminar/data/"
+base_path = r"E:/24022314/Năm 2/Kì 2 năm 2/Khai phá và phân tích dữ liệu/Seminar/football-data-mining-fpgrowth/data/"
+
 transactions = load_and_convert_to_transactions(base_path)
 
 # --- 2. MÃ HÓA DỮ LIỆU (ONE-HOT ENCODING) ---

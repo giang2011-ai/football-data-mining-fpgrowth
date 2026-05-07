@@ -4,7 +4,7 @@ import os
 
 # --- 1. CẤU HÌNH ĐƯỜNG DẪN ---
 # Bạn hãy sửa đường dẫn này trỏ đến thư mục chứa các file .json của bạn
-base_path = r"E:/24022314/Năm 2/Kì 2 năm 2/Khai phá và phân tích dữ liệu/Seminar/data/"
+base_path = r"E:/24022314/Năm 2/Kì 2 năm 2/Khai phá và phân tích dữ liệu/Seminar/football-data-mining-fpgrowth/data"
 
 def load_and_convert_to_transactions(directory):
     all_transactions = []
