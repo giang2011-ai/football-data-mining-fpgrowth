@@ -1,0 +1,32 @@
+support,itemsets
+1.0,frozenset({'goal'})
+0.994535519125683,frozenset({'wing_play'})
+0.994535519125683,"frozenset({'wing_play', 'goal'})"
+0.912568306010929,frozenset({'cutback'})
+0.912568306010929,"frozenset({'wing_play', 'cutback'})"
+0.912568306010929,"frozenset({'wing_play', 'goal', 'cutback'})"
+0.912568306010929,"frozenset({'goal', 'cutback'})"
+0.8907103825136612,"frozenset({'wing_play', 'cross', 'goal'})"
+0.8907103825136612,frozenset({'cross'})
+0.8907103825136612,"frozenset({'wing_play', 'cross'})"
+0.8907103825136612,"frozenset({'cross', 'goal'})"
+0.8688524590163934,"frozenset({'wing_play', 'cross', 'cutback'})"
+0.8688524590163934,"frozenset({'cross', 'cutback'})"
+0.8688524590163934,"frozenset({'cross', 'goal', 'cutback'})"
+0.8688524590163934,"frozenset({'wing_play', 'cross', 'goal', 'cutback'})"
+0.7650273224043715,frozenset({'header'})
+0.7650273224043715,"frozenset({'header', 'cross'})"
+0.7650273224043715,"frozenset({'header', 'wing_play'})"
+0.7650273224043715,"frozenset({'header', 'goal'})"
+0.7650273224043715,"frozenset({'header', 'cross', 'wing_play'})"
+0.7650273224043715,"frozenset({'header', 'cross', 'goal'})"
+0.7650273224043715,"frozenset({'header', 'cross', 'goal', 'wing_play'})"
+0.7650273224043715,"frozenset({'header', 'goal', 'wing_play'})"
+0.7595628415300546,"frozenset({'header', 'cross', 'cutback'})"
+0.7595628415300546,"frozenset({'header', 'cutback'})"
+0.7595628415300546,"frozenset({'header', 'wing_play', 'cutback'})"
+0.7595628415300546,"frozenset({'header', 'goal', 'cutback'})"
+0.7595628415300546,"frozenset({'header', 'cross', 'wing_play', 'cutback'})"
+0.7595628415300546,"frozenset({'header', 'cross', 'goal', 'cutback'})"
+0.7595628415300546,"frozenset({'header', 'goal', 'wing_play', 'cutback'})"
+0.7595628415300546,"frozenset({'cross', 'header', 'goal', 'cutback', 'wing_play'})"
