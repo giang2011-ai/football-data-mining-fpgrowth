@@ -8,7 +8,7 @@ from mlxtend.frequent_patterns import fpgrowth, association_rules
 # 1. CẤU HÌNH
 # =========================================================
 # Thư mục chứa các file event JSON
-base_path = r"E:/24022314/Năm 2/Kì 2 năm 2/Khai phá và phân tích dữ liệu/Seminar/football-data-mining-fpgrowth/data"
+base_path = base_path = "data"
 
 # Ngưỡng cho FP-Growth
 MIN_SUPPORT = 0.01
@@ -83,13 +83,6 @@ def load_and_convert_to_transactions(directory):
 
             df['player.name'] = df['player.name'].fillna('System')
 
-            # Tạo nhãn hành động
-            df['action_label'] = (
-                df['player.name'].astype(str)
-                + "_"
-                + df['type.name'].astype(str)
-            )
-
             # Sắp xếp theo thời gian
             sort_cols = [col for col in ['minute', 'second'] if col in df.columns]
             if sort_cols:
@@ -97,9 +90,57 @@ def load_and_convert_to_transactions(directory):
 
             # Gom theo từng possession
             for _, df_possession in df.groupby('possession'):
-                transaction = df_possession['action_label'].tolist()
 
-                # Bỏ các possession quá ngắn
+                features = set()
+
+                for _, row in df_possession.iterrows():
+
+                    try:
+
+                        # THROUGH BALL
+                        if row['type.name'] == 'Pass':
+                            if row.get('pass.through_ball', False):
+                                features.add('through_ball')
+
+                    except:
+                        pass
+
+                    try:
+
+                        # CENTRAL ATTACK
+                        if isinstance(row.get('location'), list):
+
+                            y = row['location'][1]
+
+                            if 30 < y < 50:
+                                features.add('central_attack')
+
+                    except:
+                        pass
+
+                    try:
+
+                        # INSIDE BOX SHOT
+                        if row['type.name'] == 'Shot':
+
+                            x = row['location'][0]
+
+                            if x > 102:
+                                features.add('inside_box_shot')
+
+                    except:
+                        pass
+
+                # FAST BREAK
+                if len(df_possession) < 6:
+                    features.add('fast_break')
+
+                # GOAL
+                if 'Shot' in df_possession['type.name'].values:
+                    features.add('goal')
+
+                transaction = list(features)
+
                 if len(transaction) < 2:
                     continue
 
