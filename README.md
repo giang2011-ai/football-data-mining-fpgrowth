@@ -40,11 +40,11 @@ football-data-mining-fpgrowth/
 │
 ├── convert_data.py                         
 ├── wing_analysis.py                        
-├── fp_growth_wing.py                       # FP-Growth cho wing_attack
-├── fp_growth_direct.py                     # FP-Growth cho direct_attack
-├── mining_analyst.py                       # Tổng hợp và phân tích luật kết hợp
-├── visualize_attack_paths.py               # Vẽ sơ đồ đường tấn công
-├── fifa_world_cup_statsbomb_analysis.py    # Phân tích dữ liệu ban đầu
+├── fp_growth_wing.py                       
+├── fp_growth_direct.py                     
+├── mining_analyst.py                       
+├── visualize_attack_paths.py               
+├── fifa_world_cup_statsbomb_analysis.py    
 │
 ├── wing_transactions.csv
 ├── direct_transactions.csv
@@ -55,5 +55,4 @@ football-data-mining-fpgrowth/
 ├── wing_association_rules.csv
 ├── direct_association_rules.csv
 │
-├── seminar_tactical_insights.md            # Báo cáo phân tích chiến thuật
 └── README.md
